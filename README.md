@@ -6,17 +6,17 @@ This is a Python backend applcaition that shows just a page of Bitaxe on your ne
 
 
 # Dependencies
- Python 3.13
-  pip install flask requests
+ Python 3.13  
+  pip install flask requests  
 
 How to use-
- download the bitaxe folder
-go into the folder and Run the app-
+ download the bitaxe folder  
+go into the folder and Run the app-  
   
-  python backend.py
+  python backend.py  
 
-Visit the Site-
-  http://localhost:5000
+Visit the Site-  
+  http://localhost:5000  
 
 
 
