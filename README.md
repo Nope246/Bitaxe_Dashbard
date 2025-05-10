@@ -1,5 +1,9 @@
 # Bitaxe_Dashbard
 
+This is a Python backend applcaition that shows just a page of Bitaxe on your network. This is based on the SWARM page on a bitaxe.You can Scan the network or just impot a list of IPs.
+
+
+
 
 Dependencies
   Python 3.13
@@ -10,6 +14,7 @@ Run the app-
 
 Visit the Site-
   http://localhost:5000
+
 
 
 
