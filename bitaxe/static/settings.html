@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bitaxe Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #1e1e1e;
+            color: white;
+        }
+        .header {
+            background-color: #2e2e2e;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .content {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            padding: 20px;
+        }
+        .panel {
+            flex: 1;
+            background-color: #2e2e2e;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 3px;
+            border: 1px solid #444;
+            text-align: center;
+        }
+        input[type='text'], select {
+            width: 100%;
+            background-color: #1e1e1e;
+            border: none;
+            color: white;
+            padding: 6px;
+        }
+        button {
+            padding: 6px 10px;
+            margin: 5px 0;
+            background-color: #444;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Settings</h1>
+    <a href="/index.html"><button>Back to Dashboard</button></a>
+</div>
+
+<div class="content">
+
+    <!-- Panel: Device IP Prefix and List -->
+    <div class="panel">
+        <h2>Manage IP List</h2>
+
+        <!-- Editable IP Prefix
+        <label for="ipPrefix">Network IP Prefix:</label>
+        <input type="text" id="ipPrefix" placeholder="e.g. 192.168.1.">
+        <button onclick="saveIPPrefix()">💾 Save IP Prefix</button>
+    -->
+        <!-- Editable IP List -->
+        <table id="ipTable">
+            <thead>
+                <tr><th>IP Address</th><th>Actions</th></tr>
+            </thead>
+            <tbody id="ipTableBody"></tbody>
+        </table>
+        <button onclick="addRow()">+ Add IP</button>
+        <button onclick="saveIPs()">💾 Save IP List</button>
+    </div>
+
+    
+    <!-- Panel: Dashboard Auto-Refresh & Scan Mode
+    <div class="panel">
+        <h2>Dashboard Settings</h2>
+
+        <label for="refreshIntervalSelect">Refresh Table Data Interval:</label>
+        <select id="refreshIntervalSelect">
+            <option value="5000">5 seconds</option>
+            <option value="10000">10 seconds</option>
+            <option value="15000">15 seconds</option>
+            <option value="30000" selected>30 seconds</option>
+            <option value="60000">60 seconds</option>
+            <option value="600000">10 minutes</option>
+        </select><br><br>
+
+        <label for="scanModeSelect">Scan Mode:</label>
+        <select id="scanModeSelect">
+            <option value="list">Use IP List</option>
+            <option value="scan">Network Scan</option>
+        </select><br><br>
+
+        <button onclick="saveDashboardSettings()">💾 Save Dashboard Settings</button>
+    </div>
+    -->
+</div>
+
+<script src="bitaxe_settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+
+body { 
+    font-family: sans-serif; 
+    background-image: url('btc.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    margin: 0;
+    padding: 20px;
+
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.40);
+}
+
+td {
+    background-color: rgba(0, 0, 0, 0.40);
+    color: white;
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+
+th {
+    background-color: rgba(50, 50, 50, 0.7);
+    color: white;
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+@keyframes flashRed {
+    0% { color: red; }
+    50% { color: white; }
+    100% { color: red; }
+}
+
+.flash-red {
+    animation: flashRed 1s infinite;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    th {
+        display: none;
+    }
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+    td::before {
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        white-space: nowrap;
+    }
+}
+
+button {
+    padding: 8px 12px;
+    margin: 4px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3498db;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#last-updated {
+    font-size: 0.8em;
+    color: #ccc;
+    opacity: 0.7;
+    margin-top: 10px;
+}
+#total {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: rgba(0, 0, 0, 0.99); /* semi-transparent black */
+    border-radius: 6px;
+    font-size: 1.75em;
+    margin-top: 10px;
+}
+
+
+/* Success button */
+button.success {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+button.success:hover {
+    background-color: #27ae60;
+}
+
+
+
+/* Outline button */
+button.outline {
+    background-color: transparent;
+    color: #3498db;
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    padding: 6px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+button.outline:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+
+/* Style all links inside table cells */
+table a {
+    color: #f39c12;          /* A bright Or that stands out */
+    font-weight: bold;       /* Optional: make them stand out */
+    text-decoration: underline;  /* Add underline on hover for clarity */
+}
+
+table a:hover {
+    color: #16a085;          /* Darker teal on hover */
+    text-decoration: underline;  /* Add underline on hover for clarity */
+}
+
+.settings-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.settings-btn:hover {
+    background-color: #555;
+}
+
+
+.dashboard-wrapper {
+    background-color: rgba(0, 0, 0, 0.999999);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .6);
+    max-width: 1200px;
+    margin: 20px auto;
+}
+#devices tbody tr:hover {
+    background-color: rgba(99, 98, 96, 0.938);
+}
+
+.dashboard-wrapper2 {
+    background-color: rgba(0, 0, 0, 0.999999);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .6);
+    max-width: 480px;
+    margin: 20px ;
+}
+
+
+.dashboard-wrapperh {
+    background-color: rgba(0, 0, 0, 0.999999);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .6);
+    max-width: 275px;
+    margin: 10px ;
+}
