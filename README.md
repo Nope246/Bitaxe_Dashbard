@@ -6,8 +6,8 @@ This is a Python backend applcaition that shows just a page of Bitaxe on your ne
 
 
 Dependencies
-  Python 3.13
-  pip install flask requests
+ # Python 3.13
+  # pip install flask requests
 
 Run the app-
   python backend.py
