@@ -1,0 +1,276 @@
+/* ================================
+   Layout & Page Styling
+   ================================ */
+
+h1 {
+display: inline-block;
+    padding: 6px 12px;
+    background-color: rgba(0, 0, 0, 0.99);
+    border-radius: 1px;
+    text-align: center;
+    margin-bottom: .5px;
+}
+
+body {
+    font-family: sans-serif;
+    color: white;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+    background: url('btc.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.background{
+  font-size: 1em;
+    color: #ccc;
+    opacity: 0.7;
+    margin-top: 10px;
+
+}
+
+
+.dashboard-wrapper,
+.dashboard-wrapper2,
+.dashboard-wrapperh {
+    background-color: rgba(0, 0, 0, 0.99);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+    padding: 5px;
+    margin: 5px auto;
+}
+
+.dashboard-wrapper2 {
+    max-width: 480px;
+}
+
+.dashboard-wrapperh {
+    max-width: 275px;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* ================================
+   Table Styling
+   ================================ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+th {
+    background-color: rgba(50, 50, 50, 0.7);
+}
+
+#devices tbody tr:hover {
+    background-color: rgba(99, 98, 96, 0.938);
+}
+
+/* ================================
+   Responsive Table
+   ================================ */
+
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    th {
+        display: none;
+    }
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+    td::before {
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        white-space: nowrap;
+    }
+}
+
+/* ================================
+   Buttons
+   ================================ */
+
+button,
+.settings-btn {
+    padding: 8px 12px;
+    margin: 4px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+}
+
+/* Standard Button */
+button {
+    background-color: #3498db;
+}
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Success Button */
+button.success {
+    background-color: #2ecc71;
+}
+button.success:hover {
+    background-color: #27ae60;
+}
+
+/* Outline Button */
+button.outline {
+    background-color: transparent;
+    color: #3498db;
+    border: 2px solid #3498db;
+}
+button.outline:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Settings Button */
+.settings-btn {
+    font-size: 14px;
+    background-color: #333;
+}
+.settings-btn:hover {
+    background-color: #555;
+}
+
+/* ================================
+   Flashing Alert
+   ================================ */
+
+@keyframes flashRed {
+    0%, 100% { color: red; }
+    50% { color: white; }
+}
+
+.flash-red {
+    animation: flashRed 1s infinite;
+    font-weight: bold;
+}
+
+/* ================================
+   Tooltip Styling
+   ================================ */
+
+.tooltip, .tooltip2 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltip-content,
+.tooltip2 .tooltip-content {
+    visibility: hidden;
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+    font-size: 0.7em;
+    font-weight: normal;
+}
+
+.tooltip:hover .tooltip-content,
+.tooltip2:hover .tooltip-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ================================
+   Links in Tables
+   ================================ */
+
+table a {
+    color: #f39c12;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+table a:hover {
+    color: #16a085;
+}
+
+/* ================================
+   Status & Totals
+   ================================ */
+
+#last-updated {
+    font-size: 0.8em;
+    color: #ccc;
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+#total {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: rgba(0, 0, 0, 0.99);
+    border-radius: 6px;
+    font-size: 1.75em;
+    margin-top: 10px;
+}
+
+
+
+/* ================================
+   Layout Enhancements
+   ================================ */
+
+/* Top Right Controls */
+header {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Dashboard Controls Centered */
+.dashboard-wrapper2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* BTC Info Panel Centered at Bottom */
+#btc-info-panel {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.99);
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+/* Last Updated Panel Bottom Right */
+#last-updated-panel {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.99);
+    padding: 5px 10px;
+    border-radius: 8px;
+}
